@@ -138,6 +138,26 @@ a{color:inherit}.wrap{max-width:1280px;margin:auto;padding:0 28px}.section{paddi
  .hero{min-height:430px!important;background-position:42% center!important}
 }
 
+
+/* MOBILE RESPONSIVE FIX 20261003 */
+@media (max-width:700px){
+ html,body{overflow-x:hidden!important}
+ .nav{height:72px!important}
+ .nav .container,.nav .wrap{width:calc(100% - 28px)!important;min-width:0!important}
+ .brand img{width:46px!important;height:46px!important;object-fit:contain!important}
+ .brand strong{font-size:20px!important}.brand small{font-size:11px!important}
+ .navlinks,.navLinks,.nav .links,.nav nav{display:none!important}
+ .hero{min-height:0!important;height:auto!important;aspect-ratio:16/10!important;background-size:cover!important;background-position:center center!important}
+ .heroContent,.heroHotspots{display:none!important}
+ .section{padding:48px 0!important}
+ .container,.wrap{width:calc(100% - 28px)!important;max-width:100%!important}
+ .sectionTitle h2,.section-title h2{font-size:30px!important;line-height:1.15!important}
+ .plans,.grid2,.grid3,.grid4,.benefitGrid,.equipmentGrid{grid-template-columns:1fr!important}
+ .card{min-width:0!important}
+ .floatingSupport,.floating-support{right:14px!important;bottom:18px!important;font-size:15px!important;padding:13px 18px!important;max-width:190px!important}
+}
+@media (max-width:430px){.hero{aspect-ratio:16/11!important}.section{padding:40px 0!important}}
+
 </style>
 </head>
 <body>
