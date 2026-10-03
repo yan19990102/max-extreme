@@ -187,89 +187,49 @@ a{color:inherit}.wrap{max-width:1280px;margin:auto;padding:0 28px}.section{paddi
 }
 
 
-/* MAX MOBILE COMPACT UI — desktop unchanged */
+
+/* MOBILE = PROPORTIONAL DESKTOP FRAMEWORK
+   Desktop styles remain untouched. */
 @media (max-width:700px){
   html{
-    -webkit-text-size-adjust:100%!important;
-    text-size-adjust:100%!important;
+    overflow-x:hidden!important;
+    -webkit-text-size-adjust:none!important;
+    text-size-adjust:none!important;
   }
   body{
-    zoom:.78;
-    width:128.205%!important;
+    margin:0!important;
     overflow-x:hidden!important;
+    min-width:1180px!important;
+    transform-origin:top left!important;
+    transform:scale(calc(100vw / 1180))!important;
+    width:1180px!important;
   }
 
-  /* Header */
-  .nav{
-    min-height:64px!important;
-    height:64px!important;
-    padding:0 18px!important;
+  /* Keep desktop navigation, grids, cards and flow diagrams exactly in their desktop structure. */
+  .navlinks,.navLinks,.nav .links,.nav nav{
+    display:flex!important;
   }
-  .brand img{width:38px!important;height:38px!important}
-  .brand strong{font-size:18px!important}
-  .brand small{font-size:10px!important}
+  .grid2,.plans{
+    grid-template-columns:repeat(2,1fr)!important;
+  }
+  .grid3{
+    grid-template-columns:repeat(3,1fr)!important;
+  }
+  .grid4,.benefitGrid{
+    grid-template-columns:repeat(4,1fr)!important;
+  }
 
-  /* Hero: show the whole artwork instead of enlarging/cropping it */
+  /* Hero keeps the same desktop composition instead of mobile cropping/reflow. */
   .hero{
     width:100%!important;
     min-height:0!important;
-    height:auto!important;
-    aspect-ratio:16/9!important;
-    background-size:100% auto!important;
-    background-repeat:no-repeat!important;
-    background-position:center top!important;
+    background-size:cover!important;
+    background-position:center center!important;
   }
 
-  /* General content */
-  main.wrap,.wrap,.container{
-    width:calc(100% - 40px)!important;
-    max-width:none!important;
-    margin-left:auto!important;
-    margin-right:auto!important;
-  }
-  .section{padding:42px 0!important}
-  .title{margin-bottom:24px!important}
-  .title h2,.sectionTitle h2,.section-title h2{
-    font-size:32px!important;
-    line-height:1.15!important;
-  }
-  .title p,.sectionTitle p,.section-title p{
-    font-size:15px!important;
-    line-height:1.65!important;
-  }
-  .eyebrow{font-size:11px!important;letter-spacing:3px!important}
-
-  /* Cards */
-  .grid2,.grid3,.grid4,.plans,.benefitGrid,.equipmentGrid{
-    gap:14px!important;
-  }
-  .card{
-    padding:24px!important;
-    border-radius:18px!important;
-  }
-  .card h3{font-size:23px!important;margin-bottom:8px!important}
-  .card .sub,.sub{font-size:16px!important}
-  .price{font-size:50px!important;margin:18px 0!important}
-  .price small{font-size:14px!important}
-  .ticks,.card p,.card div{
-    line-height:1.65;
-  }
-  .line{margin:18px 0!important}
-
-  /* Flow blocks */
-  .flow,.flow.compact{gap:9px!important}
-  .step,.flow.compact .step{
-    min-height:72px!important;
-    padding:12px!important;
-  }
-
-  /* Floating support button */
+  /* Floating support remains part of the scaled desktop composition. */
   .floatingSupport,.floating-support{
-    right:18px!important;
-    bottom:18px!important;
-    padding:11px 16px!important;
-    font-size:14px!important;
-    max-width:175px!important;
+    position:fixed!important;
   }
 }
 
